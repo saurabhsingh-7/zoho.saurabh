@@ -1,0 +1,251 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+/* Navigation Bar Styling */
+nav {
+    background: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    color: white;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #ffeb3b;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Close Button for Mobile Menu */
+.nav-close {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    margin: 15px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav .nav-links.active {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-close {
+        display: block;
+    }
+}
+
+/* Header Section */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.contact-info a:hover {
+    color: #ffeb3b;
+}
+
+/* Section Styling */
+.section {
+    padding: 40px 0;
+    background-color: white;
+    margin: 20px 0;
+    
+    
+}
+
+ul img {
+    width: 300px;
+    height: 80px;
+   
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Flowchart Styling */
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.flow-item {
+    position: relative;
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background-color: #e8f5e9;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.flow-item .icon {
+    position: absolute;
+    top: -20px;
+    left: 12px;
+    background-color: #4CAF50;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flow-item p {
+    margin: 0;
+    padding-left: 60px;
+}
+
+.flow-item .arrow {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #4CAF50;
+}
+
+.flow-item:last-child .arrow {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
